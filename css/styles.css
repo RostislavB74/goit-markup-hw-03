@@ -231,9 +231,12 @@ body {
 .our-works-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 24px; */
+  /* justify-content: space-between; */
 }
-.our-works-item {
-  flex-basis: calc((100% - 48px) / 3);
+.our-works-list:not(:last-child) {
+  margin-right: 24px;
 }
 
 /*====================OUR TEAM====================*/
@@ -270,7 +273,14 @@ body {
 .personalities-position {
   font-size: 16px;
 }
-
+.personalities-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.personalities-item:not(:last-child) {
+  margin-right: 24px;
+}
 /*====================FOOTER====================*/
 .footer-section {
   background-color: var(--color-dark);
