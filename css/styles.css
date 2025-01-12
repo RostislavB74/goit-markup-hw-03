@@ -11,6 +11,8 @@
   --color-hero-background: #2e2f42;
   --color-white-background: #ffffff;
   --color-modal-background: #fcfcfc;
+
+  --card-set-gap: 24px;
 }
 
 .list {
@@ -40,6 +42,8 @@ ol {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 button {
   cursor: pointer;
@@ -71,7 +75,7 @@ body {
   background-color: var(--color-white-background);
 }
 .container {
-  width: 1188px;
+  width: 1158px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -101,13 +105,13 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-primary-brand);
-  margin-right: 76px;
 }
 
 .logo-half-header {
   color: var(--color-dark);
 }
 .menu {
+  margin-left: 76px;
   display: flex;
   align-items: center;
 }
@@ -196,18 +200,23 @@ body {
 .advantage-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 .advantage-item {
-  flex-basis: calc((100% - 72px) / 4);
+  flex-basis: calc(100% / 4 - 24px);
   text-align: left;
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
-.advantage-item:not(:last-child) {
-  margin-right: 24px;
-}
+
 .advantage-item-title {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
+  padding-left: 0;
+  padding-right: 0;
   letter-spacing: 0.02em;
   color: var(--color-dark);
 }
@@ -232,13 +241,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* gap: 24px; */
-  /* justify-content: space-between; */
-}
-.our-works-list:not(:last-child) {
-  margin-right: 24px;
+
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
+.our-works-item {
+  flex-basis: calc(100% / 3 - 24px);
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+  /* max-width: 360px; */
+}
 /*====================OUR TEAM====================*/
 .personalities-section {
   background-color: var(--color-light);
@@ -253,10 +266,14 @@ body {
   text-align: center;
   text-transform: capitalize;
   color: var(--color-dark);
+  margin-bottom: 72px;
 }
 
 .personalities-item {
   background-color: var(--color-white-background);
+  flex-basis: calc(100% / 4 - 24px);
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .personalities-item-title {
@@ -268,6 +285,7 @@ body {
   text-align: center;
   text-transform: capitalize;
   color: var(--color-dark);
+  margin-bottom: 8px;
 }
 
 .personalities-position {
@@ -277,21 +295,41 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
-.personalities-item:not(:last-child) {
-  margin-right: 24px;
+
+.personalities-description {
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 32px;
 }
 /*====================FOOTER====================*/
 .footer-section {
   background-color: var(--color-dark);
   color: var(--color-light);
 }
-
+.footer-text {
+  margin-top: 18px;
+}
+.footer-description {
+  max-width: 264px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 156px;
+}
 .logo-half-footer {
   color: var(--color-light);
 }
 
 /*====================PORTFOLIO===================*/
+.portfolio-nav-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 96px;
+  margin-bottom: 72px;
+}
 .portfolio-btn {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -337,4 +375,25 @@ body {
   letter-spacing: 0.02em;
   text-decoration-skip-ink: none;
   color: var(--color-body-text);
+}
+.projects-list {
+  display: flex;
+
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+.project-description {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+}
+.portfolio-project-directions {
+  margin-bottom: 8px;
+}
+.project-card {
+  flex-basis: calc(100% / 3 - 24px);
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
