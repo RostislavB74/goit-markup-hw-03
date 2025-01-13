@@ -13,6 +13,7 @@
   --color-modal-background: #fcfcfc;
 
   --card-set-gap: 24px;
+  --portfolio-btn-set-gap: 24px;
 }
 
 .list {
@@ -114,6 +115,7 @@ body {
   margin-left: 76px;
   display: flex;
   align-items: center;
+  
 }
 
 .menu-item:not(:last-child) {
@@ -340,9 +342,18 @@ body {
   text-decoration-skip-ink: none;
   color: var(--color-primary-brand);
   background-color: var(--color-light);
+  border-radius: 4px;
+  border-color: var(--color-accent);
   cursor: pointer;
+  min-width: 69px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+    padding-left: 24px;
 }
-
+.portfolio-nav-btn-list{
+flex-basis: calc(100% / 4 - 24px);
+}
 .portfolio-btn:focus,
 .portfolio-btn:hover {
   color: var(--color-white-background);
@@ -351,6 +362,10 @@ body {
 }
 .portfolio-title {
   color: var(--color-white-background);
+}
+
+.portfolio-nav-btn-item:not(:last-child) {
+  margin-right: var(--portfolio-btn-set-gap);
 }
 .portfolio-project {
   /* text-decoration: none; */
